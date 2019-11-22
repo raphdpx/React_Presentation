@@ -1,0 +1,8 @@
+{
+    "types": ["node"],
+    "compilerOptions": {
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "isolatedModules": false
+    }
+  }
