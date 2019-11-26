@@ -10,8 +10,9 @@ using NsiTools.EfUtils.Core.CriteriaBuilder;
 using NsiTools.EfUtils.Core.Interfaces;
 using NsiTools.EfUtils.Core.SearchBase;
 using NsiTools.Utils.Extensions;
-using RP.Abstractions.Repositories;
 using RP.Abstractions.Services;
+using RP.DataAccess.Entities;
+using RP.DataAccess.Repositories.Interfaces;
 using RP.Domain.Dtos.Details;
 using RP.Domain.Dtos.Simple;
 using RP.Domain.SearchObjects;
@@ -31,19 +32,39 @@ namespace RP.BusinessLogic.Services
             _mapper = mapper;
         }
 
-        public void Delete(int employeeId)
+        public void Delete(long employeeId)
         {
             _employeeRepository.Delete(employeeId);
         }
 
-        public EmployeeDto GetEmployee(int employeeId)
+        public EmployeeDto GetEmployee(long employeeId)
         {
             return _employeeRepository.Query.Where(d => d.EmployeeId == employeeId).ProjectTo<EmployeeDto>(_mapper.ConfigurationProvider).SingleOrDefault();
         }
 
         public EmployeeDto Save(EmployeeDto dto)
         {
-            throw new NotImplementedException();
+            if (dto == null) return null;
+
+            var employeeDbo = _employeeRepository.Query.SingleOrDefault(c => c.EmployeeId == dto.EmployeeId);
+
+            if (employeeDbo == null) //ADD
+            {
+                employeeDbo = _mapper.Map<Employees>(dto);
+                employeeDbo.EmployeeId = 0;
+                _employeeRepository.Insert(employeeDbo);
+            }
+            else
+            {
+                _mapper.Map(dto, employeeDbo);
+            }
+
+            _unitOfWork.SaveChanges(new UnitOfWorkOptions()
+            {
+                EnableTrace = true
+            });
+
+            return GetEmployee(employeeDbo.EmployeeId);
         }
 
         public PaginatedResults<EmployeeGridDto> Search(EmployeeSearch search)

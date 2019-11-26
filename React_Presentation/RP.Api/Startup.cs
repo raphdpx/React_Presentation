@@ -16,7 +16,6 @@ using Microsoft.Extensions.Logging;
 using NLog;
 using NLog.Extensions.Logging;
 using NsiTools.EfUtils.Core.Interfaces;
-using RP.Abstractions.Repositories;
 using RP.Abstractions.Services;
 using RP.Api.Authentication;
 using RP.Api.Swagger;
@@ -24,6 +23,7 @@ using RP.BusinessLogic.Services;
 using RP.DataAccess;
 using RP.DataAccess.Entities;
 using RP.DataAccess.Repositories;
+using RP.DataAccess.Repositories.Interfaces;
 using RP.Domain.Config;
 
 namespace RP.Api

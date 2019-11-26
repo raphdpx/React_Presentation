@@ -4,8 +4,8 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using NsiTools.EfUtils.Core;
 using NsiTools.EfUtils.Core.Interfaces;
-using RP.Abstractions.Repositories;
 using RP.DataAccess.Entities;
+using RP.DataAccess.Repositories.Interfaces;
 
 namespace RP.DataAccess.Repositories
 {

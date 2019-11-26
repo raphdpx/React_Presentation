@@ -11,8 +11,8 @@ namespace RP.Abstractions.Services
     public interface IEmployeeService
     {
         PaginatedResults<EmployeeGridDto> Search(EmployeeSearch search);
-        EmployeeDto GetEmployee(int employeeId);
+        EmployeeDto GetEmployee(long employeeId);
         EmployeeDto Save(EmployeeDto dto);
-        void Delete(int employeeId);
+        void Delete(long employeeId);
     }
 }
