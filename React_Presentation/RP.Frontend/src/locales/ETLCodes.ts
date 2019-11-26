@@ -36,5 +36,6 @@ export enum ETLCodes {
   Save,
   DeleteSuccess,
   UnableToDelete,
-  NewEmployee
+  NewEmployee,
+  EmployeeDeleteConfirmation
 }

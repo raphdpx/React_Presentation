@@ -20,7 +20,7 @@ import * as Yup from "yup";
 import { EmployeeApi, EmployeeDto, EReferentialTypes } from "../../../api";
 import { apiConfiguration } from "../../../apiConfig";
 import { ERoutes } from "../../../AppRouter";
-import { useTl } from "../../../hooks";
+import { useTl, useDialog } from "../../../hooks";
 import { useReferential } from "../../../hooks/useReferential";
 import { ETLCodes } from "../../../locales";
 
@@ -61,6 +61,7 @@ const RightButtons = styled.div`
 export const EmployeeItemPage: React.FunctionComponent<IEmployeeItemPageProps> = props => {
   const { t } = useTl();
   const { id } = useParams<{ id: string }>();
+  const { showConfirmDialog } = useDialog();
   const employeeId = React.useMemo(() => +id, [id]);
   const employeeApi = React.useMemo(() => new EmployeeApi(apiConfiguration()), []);
   const history = useHistory();
@@ -122,17 +123,22 @@ export const EmployeeItemPage: React.FunctionComponent<IEmployeeItemPageProps> =
   );
 
   const [deleting, setDeleting] = React.useState(false);
-  const deleteEmployee = React.useCallback(async () => {
-    try {
-      setDeleting(true);
-      await employeeApi.apiEmployeeEmployeeIdDelete({ employeeId: employeeId });
-    } catch (err) {
-      showError(t(ETLCodes.UnableToDelete));
-    }
-    setDeleting(false);
-    history.push(ERoutes.employee);
-    showSuccess(t(ETLCodes.DeleteSuccess, { name: `${data ? data.firstName : ""} ${data ? data.lastName : ""}` }));
-  }, [data, employeeApi, employeeId, history, t]);
+  const deleteEmployee = React.useCallback(() => {
+    showConfirmDialog({
+      message: t(ETLCodes.EmployeeDeleteConfirmation),
+      onConfirmed: async () => {
+        try {
+          setDeleting(true);
+          await employeeApi.apiEmployeeEmployeeIdDelete({ employeeId: employeeId });
+        } catch (err) {
+          showError(t(ETLCodes.UnableToDelete));
+        }
+        setDeleting(false);
+        history.push(ERoutes.employee);
+        showSuccess(t(ETLCodes.DeleteSuccess, { name: `${data ? data.firstName : ""} ${data ? data.lastName : ""}` }));
+      }
+    });
+  }, [data, employeeApi, employeeId, history, showConfirmDialog, t]);
 
   return (
     <PageLayout
