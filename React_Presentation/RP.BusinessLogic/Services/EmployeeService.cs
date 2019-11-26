@@ -35,6 +35,11 @@ namespace RP.BusinessLogic.Services
         public void Delete(long employeeId)
         {
             _employeeRepository.Delete(employeeId);
+
+            _unitOfWork.SaveChanges(new UnitOfWorkOptions()
+            {
+                EnableTrace = true
+            });
         }
 
         public EmployeeDto GetEmployee(long employeeId)
