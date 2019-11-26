@@ -34,8 +34,8 @@
     "SearchCriteriaPanel_SearchModes_Equals": "Equals",
     "SearchCriteriaPanel_SearchModes_NotContains": "Not Contains",
     "SearchCriteriaPanel_SearchModes_StartWith": "Start With",
-    "TableCriterias": "Table Criterias",
-    "TableResults": "Table Results",
+    "TableCriterias": "Criterias",
+    "TableResults": "Results",
     "ToggleFixedTooltip": "Toggle Fixed Tooltip",
     "UnableToDelete": "Unable to delete"
   }
