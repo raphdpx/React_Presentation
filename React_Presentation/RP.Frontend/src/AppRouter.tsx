@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 
-import { HomePage } from "./pages/home/item/Home";
+import { HomePage } from "./pages/home/item/HomePage";
 import { EmployeeItemPage } from "./pages/employee/item/EmployeeItemPage";
 import { EmployeeListPage } from "./pages/employee/list/EmployeeListPage";
 
