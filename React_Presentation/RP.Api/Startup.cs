@@ -90,6 +90,7 @@ namespace RP.Api
 
             app.UseRouting();
 
+            app.UseCors();
             app.UseAuthentication();
             app.UseAuthorization();
 

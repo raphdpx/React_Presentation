@@ -18,11 +18,11 @@
  * @enum {string}
  */
 export enum ETextSearchType {
-  NUMBER_0 = 0,
-  NUMBER_1 = 1,
-  NUMBER_2 = 2,
-  NUMBER_3 = 3,
-  NUMBER_4 = 4
+  StartWith = "StartWith",
+  EndWith = "EndWith",
+  Contains = "Contains",
+  NotContains = "NotContains",
+  Equals = "Equals"
 }
 
 export function ETextSearchTypeFromJSON(json: any): ETextSearchType {

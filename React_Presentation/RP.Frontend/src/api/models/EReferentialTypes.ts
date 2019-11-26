@@ -18,7 +18,7 @@
  * @enum {string}
  */
 export enum EReferentialTypes {
-  NUMBER_0 = 0
+  Company = "Company"
 }
 
 export function EReferentialTypesFromJSON(json: any): EReferentialTypes {

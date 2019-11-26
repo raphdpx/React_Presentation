@@ -18,8 +18,8 @@
  * @enum {string}
  */
 export enum EListSearchType {
-  NUMBER_0 = 0,
-  NUMBER_1 = 1
+  Equals = "Equals",
+  NotEquals = "NotEquals"
 }
 
 export function EListSearchTypeFromJSON(json: any): EListSearchType {

@@ -18,7 +18,7 @@
  * @enum {string}
  */
 export enum EBooleanSearchTypes {
-  NUMBER_0 = 0
+  None = "None"
 }
 
 export function EBooleanSearchTypesFromJSON(json: any): EBooleanSearchTypes {

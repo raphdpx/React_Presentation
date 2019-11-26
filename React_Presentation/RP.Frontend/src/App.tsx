@@ -41,7 +41,7 @@ export const App: React.FunctionComponent<IAppProps> = props => {
   const { t } = useTl();
   const [menuFixed, setMenuFixed] = React.useState(true);
   const [drawerVisible, setDrawerVisible] = React.useState(false);
-  const [darkMode, setDarkMode] = React.useState(true);
+  const [darkMode, setDarkMode] = React.useState(false);
 
   return (
     <BrowserRouter>

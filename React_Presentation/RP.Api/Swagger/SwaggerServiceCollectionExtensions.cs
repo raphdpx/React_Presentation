@@ -15,6 +15,7 @@ namespace RP.Api.Swagger
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1.0", new OpenApiInfo { Title = "PaulExpress API v1.0", Version = "v1.0" });
+                c.DescribeAllEnumsAsStrings();
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                 {
