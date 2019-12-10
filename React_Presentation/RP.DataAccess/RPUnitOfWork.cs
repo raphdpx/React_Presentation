@@ -7,9 +7,9 @@ using NsiTools.EfUtils.Core.Interfaces;
 
 namespace RP.DataAccess
 {
-    public class TrackHomeUnitOfWork : UnitOfWork
+    public class RPUnitOfWork : UnitOfWork
     {
-        public TrackHomeUnitOfWork(DbContext dbContext, IAuthorTraceability authorTraceability) : base(dbContext, authorTraceability)
+        public RPUnitOfWork(DbContext dbContext, IAuthorTraceability authorTraceability) : base(dbContext, authorTraceability)
         {
         }
     }

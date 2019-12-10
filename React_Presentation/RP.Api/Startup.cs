@@ -67,7 +67,7 @@ namespace RP.Api
                 return new RPEntities(builder.Options);
             });
 
-            services.AddScoped<IUnitOfWork, TrackHomeUnitOfWork>();
+            services.AddScoped<IUnitOfWork, RPUnitOfWork>();
 
             services.AddScoped<IAuthorTraceability, WebAuthorTraceability>();
             services.AddScoped<IEmployeeService, EmployeeService>();

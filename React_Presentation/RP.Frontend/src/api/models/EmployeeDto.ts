@@ -57,6 +57,12 @@ export interface EmployeeDto {
   email?: string | null;
   /**
    *
+   * @type {number}
+   * @memberof EmployeeDto
+   */
+  companyId?: number | null;
+  /**
+   *
    * @type {Date}
    * @memberof EmployeeDto
    */
@@ -114,6 +120,7 @@ export function EmployeeDtoFromJSONTyped(json: any, ignoreDiscriminator: boolean
     dateOfBirth: !exists(json, "dateOfBirth") ? undefined : new Date(json["dateOfBirth"]),
     phoneNumber: !exists(json, "phoneNumber") ? undefined : json["phoneNumber"],
     email: !exists(json, "email") ? undefined : json["email"],
+    companyId: !exists(json, "companyId") ? undefined : json["companyId"],
     createdOn: !exists(json, "createdOn") ? undefined : new Date(json["createdOn"]),
     createdBy: !exists(json, "createdBy") ? undefined : json["createdBy"],
     updatedOn: !exists(json, "updatedOn") ? undefined : new Date(json["updatedOn"]),
@@ -142,6 +149,7 @@ export function EmployeeDtoToJSON(value?: EmployeeDto | null): any {
     dateOfBirth: value.dateOfBirth === undefined ? undefined : value.dateOfBirth.toISOString(),
     phoneNumber: value.phoneNumber,
     email: value.email,
+    companyId: value.companyId,
     createdOn: value.createdOn === undefined ? undefined : value.createdOn.toISOString(),
     createdBy: value.createdBy,
     updatedOn: value.updatedOn === undefined ? undefined : value.updatedOn.toISOString(),

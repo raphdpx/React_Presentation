@@ -44,7 +44,9 @@ namespace RP.BusinessLogic.Services
 
         public EmployeeDto GetEmployee(long employeeId)
         {
-            return _employeeRepository.Query.Where(d => d.EmployeeId == employeeId).ProjectTo<EmployeeDto>(_mapper.ConfigurationProvider).SingleOrDefault();
+            var res = _employeeRepository.Query.Where(d => d.EmployeeId == employeeId).ProjectTo<EmployeeDto>(_mapper.ConfigurationProvider).SingleOrDefault();
+
+            return res;
         }
 
         public EmployeeDto Save(EmployeeDto dto)

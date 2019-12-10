@@ -72,7 +72,7 @@ export const EmployeeListPage: React.FunctionComponent<IEmployeeListPageProps> =
   );
 
   return (
-    <PageLayout title={t(ETLCodes.Employees)}>
+    <PageLayout title={t(ETLCodes.Employees)} withCard>
       <FieldSet title={t(ETLCodes.TableCriterias)} collapsable={true}>
         <SearchCriteriaPanel
           searchFunc={() => employeeApi.apiEmployeeCriteriasGet({ includeListsValues: true })}

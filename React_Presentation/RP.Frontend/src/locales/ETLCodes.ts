@@ -37,5 +37,8 @@ export enum ETLCodes {
   DeleteSuccess,
   UnableToDelete,
   NewEmployee,
-  EmployeeDeleteConfirmation
+  EmployeeDeleteConfirmation,
+  Private,
+  Work,
+  ErrorMessage_DateOfBirthMin
 }

@@ -10,9 +10,11 @@
     "Delete": "Delete__fr",
     "DeleteSuccess": "DeleteSuccess__fr",
     "Email": "Email__fr",
+    "EmployeeDeleteConfirmation": "EmployeeDeleteConfirmation__fr",
     "EmployeeSaveError": "EmployeeSaveError__fr",
     "EmployeeSaveSuccess": "EmployeeSaveSuccess__fr",
     "Employees": "Employees__fr",
+    "ErrorMessage_DateOfBirthMin": "ErrorMessage_DateOfBirthMin__fr",
     "ErrorMessage_DateOfBirthRequired": "ErrorMessage_DateOfBirthRequired__fr",
     "ErrorMessage_FirstNameRequired": "ErrorMessage_FirstNameRequired__fr",
     "ErrorMessage_LastNameRequired": "ErrorMessage_LastNameRequired__fr",
@@ -25,6 +27,7 @@
     "Menu": "Menu__fr",
     "NewEmployee": "NewEmployee__fr",
     "PhoneNumber": "PhoneNumber__fr",
+    "Private": "Private__fr",
     "Save": "Save__fr",
     "SearchCriteriaPanel_AddCriteria": "SearchCriteriaPanel_AddCriteria__fr",
     "SearchCriteriaPanel_RemoveCriteria": "SearchCriteriaPanel_RemoveCriteria__fr",
@@ -37,6 +40,7 @@
     "TableCriterias": "TableCriterias__fr",
     "TableResults": "TableResults__fr",
     "ToggleFixedTooltip": "ToggleFixedTooltip__fr",
-    "UnableToDelete": "UnableToDelete__fr"
+    "UnableToDelete": "UnableToDelete__fr",
+    "Work": "Work__fr"
   }
 }

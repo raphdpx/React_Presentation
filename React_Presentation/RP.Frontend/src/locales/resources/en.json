@@ -10,9 +10,11 @@
     "Delete": "Delete",
     "DeleteSuccess": "Delete successful",
     "Email": "Email",
+    "EmployeeDeleteConfirmation": "Employee Delete Confirmation",
     "EmployeeSaveError": "Error while saving employee",
-    "EmployeeSaveSuccess": "employee successful",
+    "EmployeeSaveSuccess": "Save successful",
     "Employees": "Employees",
+    "ErrorMessage_DateOfBirthMin": "Date of birth must be after 01/01/1950 included",
     "ErrorMessage_DateOfBirthRequired": "Date Of Birth required",
     "ErrorMessage_FirstNameRequired": "First Name required",
     "ErrorMessage_LastNameRequired": "Last Name required",
@@ -25,6 +27,7 @@
     "Menu": "Menu",
     "NewEmployee": "New Employee",
     "PhoneNumber": "Phone Number",
+    "Private": "Private",
     "Save": "Save",
     "SearchCriteriaPanel_AddCriteria": "Add Criteria",
     "SearchCriteriaPanel_RemoveCriteria": "Remove Criteria",
@@ -37,6 +40,7 @@
     "TableCriterias": "Criterias",
     "TableResults": "Results",
     "ToggleFixedTooltip": "Toggle Fixed Tooltip",
-    "UnableToDelete": "Unable to delete"
+    "UnableToDelete": "Unable to delete",
+    "Work": "Work"
   }
 }
