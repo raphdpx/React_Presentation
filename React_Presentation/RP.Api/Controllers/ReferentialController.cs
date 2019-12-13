@@ -31,6 +31,12 @@ namespace RP.Api.Controllers
                 case EReferentialTypes.Company:
                     list = _referentialService.GetCompanies();
                     break;
+                case EReferentialTypes.Race:
+                    list = _referentialService.GetRaces();
+                    break;
+                case EReferentialTypes.Color:
+                    list = _referentialService.GetColors();
+                    break;
             }
 
             return Ok(new ReferentialResultInfoDto()

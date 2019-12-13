@@ -6,6 +6,8 @@ namespace RP.Domain.Enums
 {
     public enum EReferentialTypes
     {
-        Company
+        Company,
+        Race,
+        Color
     }
 }

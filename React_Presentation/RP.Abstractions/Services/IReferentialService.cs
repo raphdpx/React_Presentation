@@ -8,5 +8,7 @@ namespace RP.Abstractions.Services
     public interface IReferentialService
     {
         List<ReferentialItemDto> GetCompanies();
+        List<ReferentialItemDto> GetRaces();
+        List<ReferentialItemDto> GetColors();
     }
 }
