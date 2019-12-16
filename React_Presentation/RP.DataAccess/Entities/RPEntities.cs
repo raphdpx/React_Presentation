@@ -15,6 +15,7 @@ namespace RP.DataAccess.Entities
         {
         }
 
+        public virtual DbSet<Dog> Dog { get; set; }
         public virtual DbSet<Employees> Employees { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -28,6 +29,21 @@ namespace RP.DataAccess.Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Dog>(entity =>
+            {
+                entity.Property(e => e.CreatedBy)
+                    .IsRequired()
+                    .HasDefaultValueSql("('System')");
+
+                entity.Property(e => e.CreatedOn).HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.UpdatedBy)
+                    .IsRequired()
+                    .HasDefaultValueSql("('System')");
+
+                entity.Property(e => e.UpdatedOn).HasDefaultValueSql("(getdate())");
+            });
+
             modelBuilder.Entity<Employees>(entity =>
             {
                 entity.HasKey(e => e.EmployeeId);

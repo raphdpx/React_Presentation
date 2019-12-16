@@ -155,7 +155,7 @@ export const EmployeeItemPage: React.FunctionComponent<IEmployeeItemPageProps> =
           validationSchema={validationSchema}
           showButtons={false}
         >
-          <FieldGroup columns={2} fieldsetProps={{ title: t(ETLCodes.Private) }}>
+          <FieldGroup columns={[9, 3]} fieldsetProps={{ title: t(ETLCodes.Private) }}>
             <FGTextInput name="firstName" label={t(ETLCodes.FirstName)} requiredMark />
             <FGTextInput name="lastName" label={t(ETLCodes.LastName)} requiredMark />
             <FGTextInput name="phoneNumber" label={t(ETLCodes.PhoneNumber)} requiredMark />

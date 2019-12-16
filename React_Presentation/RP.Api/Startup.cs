@@ -71,10 +71,11 @@ namespace RP.Api
 
             services.AddScoped<IAuthorTraceability, WebAuthorTraceability>();
             services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IDogService, DogService>();
             services.AddScoped<IReferentialService, ReferentialService>();
 
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-
+            services.AddScoped<IDogRepository, DogRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
